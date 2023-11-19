@@ -27,4 +27,5 @@ utilisant des graphes orientés avec pondération des arcs.
 
 # Répartition du travail :
 Mohamed LAÏDOUNI : 1. -2.2
+
 Aymeric ROUYER : 2.1 - 3. - annexe numérique
