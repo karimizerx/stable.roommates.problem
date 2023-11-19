@@ -2,10 +2,10 @@
 
 # Plan :
 
-1. Introduction
-    1.1 Présentation du problème du mariage stable 
-    1.2 Présentation du problème des colocataires
-    1.3 Applications réelles
+## 1. Introduction
+### 1.1 Présentation du problème du mariage stable 
+### 1.2 Présentation du problème des colocataires
+### 1.3 Applications réelles
 
 2. Les Algorithmes et leur complexité
     2.1 Algorithme de Gale Shapley
