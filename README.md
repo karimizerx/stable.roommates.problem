@@ -9,8 +9,8 @@
 
 ## 2. Les Algorithmes et leur complexité
 ### 2.1 Algorithme de Gale Shapley
-#### 2.1.1 Fonctionnement
-#### 2.1.2 Complexité
+2.1.1 Fonctionnement
+2.1.2 Complexité
 ### 2.2 Algorithme d'Irving
 #### 2.2.1 Comment utilise-t-il Gale Shapley ?
 #### 2.2.2 Fonctionnement
