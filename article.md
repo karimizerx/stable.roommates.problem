@@ -56,29 +56,7 @@ Celui-ci détermine si un appariement stable exite ou pas, et renvoie un tel app
 
 #### 2.2.1 Comment utilise-t-il Gale Shapley ?
 
-blablabla
-
 #### 2.2.2 Fonctionnement
-
-```
-Entrée = Les listes de préférences des participants
-Sortie = Les listes réduites des participants
-
-tant que un participant p n'a pas de liste vide et n'est pas assigné à quelqu'un :
-    pour tout q à la tête de la liste de p :
-        assigner p à q;
-        pour tout successeur strict r de p dans la liste de q :
-            si r est assigné à q :
-                supprimer l'assignation;
-            fin si;
-            supprimer la paire {q,r};
-            si la liste de r est vide :
-                il n'existe pas d'appariement stable (arrêt de l'algorithme);
-            fin si;
-        fin pour;
-    fin pour;
-fin tant que;
-```
 
 #### 2.2.3 Complexité
 
