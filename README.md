@@ -8,12 +8,12 @@
    1.3 Applications réelles
 1. Les Algorithmes et leur complexité\
    2.1 Algorithme de Gale Shapley\
-   2.1.1 Fonctionnement\
-   2.1.2 Complexité\
+    2.1.1 Fonctionnement\
+    2.1.2 Complexité\
    2.2 Algorithme d'Irving\
-   2.2.1 Comment utilise-t-il Gale Shapley ?\
-   2.2.2 Fonctionnement\
-   2.2.3 Complexité
+    2.2.1 Comment utilise-t-il Gale Shapley ?\
+    2.2.2 Fonctionnement\
+    2.2.3 Complexité
 1. Solution stable\
    3.1 Obstacles trouvés par l'algorithme de Gale Shapley\
    3.2 Comment expliquer et être sûr qu'une solution stable n'existe pas ?
