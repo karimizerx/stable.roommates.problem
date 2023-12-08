@@ -2,11 +2,14 @@
 
 #### 2.1.1 Fonctionnement
 
-ça marche bien
+L'algorithme de Gale-Shapley procède par élimination. Tant qu'il existe un homme qui n'est pas en couple, on parcourt la liste des hommes, 
+et chaque homme fait une requète à son choix de préfèrence qui ne l'a pas encore refusé. Si une femme reçoit une demande et n'en a pas d'autres, elle accepte temporairement.
+Si elle a déjà reçu une demande, elle conserve son choix préféré et l'homme qui a été refusé devra faire une nouvelle demande.
 
 #### 2.1.2 Complexité
 
-O(n²)
+Dans le pire des cas, l'algorithme de Gale-Shapley va faire toutes les demandes possibles de chaque homme pour trouver un couplage stable, soit n demandes pour n hommes.
+La complexité de cet algorithme est donc O(n²) ou O(n) dans le meilleur cas, où chaque homme trouve son couplage stable dès la première demande, sans conflit.
 
 
 ## Solution Stable
