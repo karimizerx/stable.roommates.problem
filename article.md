@@ -1,15 +1,3 @@
-```
-1. Introduction
-   1.1 Présentation du problème du mariage stable
-   1.2 Présentation du problème des colocataires
-   1.3 Applications réelles
-
-   2.2 Algorithme d'Irving
-   2.2.1 Comment utilise-t-il Gale Shapley ?
-   2.2.2 Fonctionnement
-   2.2.3 Complexité
-```
-
 ## Introduction
 
 ### Problème des mariages stables
