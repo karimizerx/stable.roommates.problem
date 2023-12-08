@@ -14,7 +14,7 @@
 
 ### Problème des mariages stables
 
-Le problème des mariages stables, énoncé et résolu (par Gale et Shapley) en 1962, est à la base du problème des colocataires.
+Le problème des mariages stables, énoncé et résolu (par Gale et Shapley) en 1962, avec en vue le problème de l’affectation des étudiants aux diverses formations universitaires. Il est à la base du problème des colocataires.
 Ce problème consiste à trouver, pour deux groupes distincts de personnes, une façon de former des binômes, tel qu'aucun binôme ne risque de ce dissocier, sachant que chaque personne a des préférences sur les personnes de l'autre groupe.
 Plus formellement, le problème des mariages stables a été énoncé ainsi :
 
@@ -43,15 +43,40 @@ La différence avec le problème des mariages stables est que les personnes ne s
 
 ### Applications réelles
 
-Ces deux problèmes d'appariements répondent à problématiques réelles.
+Ces deux problèmes d'appariements répondent à problématiques réelles :
 
-- Comment affecter de manière efficace les internes en médecine aux hôpitaux en tenant compte autant que possible des préférences de chacun ?
-- affectation des internes en médecine aux hôpitaux (GS)
-- affectation des élèves comme colocataires d'un dortoir (I)
-- Le problème des mariages stables a été énoncé en 1962, avec en vue le problème de l’affectation des étudiants aux diverses formations universitaires.Le service Admission Post-Bac du ministère français de l’Enseignement supérieur a utilisé l’algorithme de Gale Shapley entre 2009 et 2017. Dans l’admission Post-Bac, les formations étaient dans le rôle des femmes et les étudiants dans celui des ̇hommes. (GS)
-- affectation des rôles pour les membres d'un projet.
+- Affecter de manière efficace les internes en médecine aux hôpitaux en tenant compte autant que possible des préférences de chacun.
+- Affecter les étudiants aux diverses formations universitaires. Le service Admission Post-Bac du ministère français de l'Enseignement supérieur a utilisé l'algorithme de Gale Shapley entre 2009 et 2017. Les formations étaient dans le rôle des femmes et les étudiants dans celui des hommes.
+- Affecter les rôles d'un projet à chacun des membres.
+- Affecter des élèves comme colocataires d'un dortoir.
 
-#### Sources
+Cette liste n'est pas exhaustive, mais présente des problèmes qui ont été résolu à l'aide des algorithmes de Gale Shapley et d'Irving.
+
+## Les Algorithmes et leur complexité
+
+### 2.1 Algorithme de Gale Shapley
+
+#### 2.1.1 Fonctionnement
+
+#### 2.1.2 Complexité
+
+### 2.2 Algorithme d'Irving
+
+blabla
+
+#### 2.2.1 Comment utilise-t-il Gale Shapley ?
+
+blablabla
+
+#### 2.2.2 Fonctionnement
+
+blobla
+
+#### 2.2.3 Complexité
+
+bululu
+
+## Sources
 
 - [_LE PRIX NOBEL D’ÉCONOMIE 2012_, par Jérôme Buzzi](https://images.math.cnrs.fr/Le-prix-Nobel-d-economie-2012.html?lang=fr#menu)
 - Wikipedia : _Problème des mariages stables_ [en français](https://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables) et [en anglais](https://en.wikipedia.org/wiki/Stable_marriage_problem)
