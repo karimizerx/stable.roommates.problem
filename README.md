@@ -20,10 +20,10 @@
 
 ### Annexe numérique : [ici](https://docs.google.com/presentation/d/12gVfTqXWskSEo31JIrgMDtM8NyO91mQGmD2sAJUlm2U/edit?usp=sharing)
 
-Démonstration interactive présentant le déroulement des algorithmes,
+Démonstration interactive présentant le déroulement des algorithmes,\
 utilisant des graphes orientés avec pondération des arcs.
 
 ### Répartition du travail :
 
-Mohamed LAÏDOUNI : 1. - 2.2
+Mohamed LAÏDOUNI : 1. - 2.2\
 Aymeric ROUYER : 2.1 - 3. - annexe numérique
