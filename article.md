@@ -54,11 +54,18 @@ Un algorithme efficace pour résoudre le problème des colocataires est énoncé
 
 Celui-ci détermine si un appariement stable exite ou pas, et renvoie un tel appariement s'il existe.
 
-#### 2.2.1 Comment utilise-t-il Gale Shapley ?
+#### 2.2.1 Fonctionnement et utilisation de Gale Shapley
 
-#### 2.2.2 Fonctionnement
+Cet algorithme se déroule en deux phases : une phase de propositions entre les individus, et une phase de suppression des cycles.
 
-#### 2.2.3 Complexité
+Dans la phase 1 :
+
+- Tout le monde se propose à son favoris.
+- Les destinataires de la proposition choisissent leur meilleur candidat et rejettent les autres.
+- Ceux qui ont été rejetés continuent de faire des propositions jusqu'à ce qu'il soient acceptés.
+> :warning: **Si quelqu'un est rejeté par tous les autres, il n'y a pas d'appariement stable !**
+
+#### 2.2.2 Complexité
 
 O(n<sup>2</sup>)
 
