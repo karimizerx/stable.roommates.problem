@@ -106,7 +106,10 @@ Donc dans tous les cas, l'algorithme d'Irving possède une **complexité en temp
 
 #### Obstacles trouvés par l'algo de Gale Shapley
 
-c'était dur
+L'algorithme doit assurer que chaque personne à coupler est couplée avec son meilleur partenaire possible. Comme les hommes décrèmentent progressivement 
+leur demande avec les rejets, ils sont sûrs d'avoir le meilleur partenaire stable possible. Cependant, comme les femmes ne peuvent pas faire de demande, elles ne peuvent
+pas assurer d'avoir leur partenaire stable préféré. Ainsi, les femmes sont toujours couplées avec leur pire partenaires stables, car elles ne peuvent qu'accepter les demandes 
+et refuser les partenaires instables.
 
 #### Comment expliquer et être sûr qu'une solution stable n'existe pas ?
 
