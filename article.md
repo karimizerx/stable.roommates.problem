@@ -12,13 +12,16 @@ Dans le pire des cas, l'algorithme de Gale-Shapley va faire toutes les demandes 
 La complexité de cet algorithme est donc O(n²) ou O(n) dans le meilleur cas, où chaque homme trouve son couplage stable dès la première demande, sans conflit.
 
 
-## Solution Stable
+## 3. Solution Stable
 
-### Obstacles trouvés par l'algorithme de Gale Shapley
+### 3.1 Obstacles trouvés par l'algorithme de Gale Shapley
 
-c'était dur
+L'algorithme doit assurer que chaque personne à coupler est couplée avec son meilleur partenaire possible. Comme les hommes décrèmentent progressivement 
+leur demande avec les rejets, ils sont sûrs d'avoir le meilleur partenaire stable possible. Cependant, comme les femmes ne peuvent pas faire de demande, elles ne peuvent
+pas assurer d'avoir leur partenaire stable préféré. Ainsi, les femmes sont toujours couplées avec leur pire partenaires stables, car elles ne peuvent qu'accepter les demandes 
+et refuser les partenaires instables.
 
-### Comment expliquer et être sûr qu'une solution stable n'existe pas ?
+### 3.2 Comment expliquer et être sûr qu'une solution stable n'existe pas ?
 
 L'algorithme de Gale-Shapley est capable de trouver systématiquement une solution stable car on cherche à former des couples entre 2 ensembles distincts de même taille. 
 Ainsi, il existe toujours exactement une solution pour tous deux ensembles. Cependant, il devient impossible d'assûrer l'existence d'un tel couplage stable si l'on 
