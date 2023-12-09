@@ -11,8 +11,7 @@
    2.1.1 Fonctionnement
    2.1.2 Complexité
    2.2 Algorithme d'Irving
-   2.2.1 Comment utilise-t-il Gale Shapley ?
-   2.2.2 Fonctionnement
+   2.2.1 Fonctionnement
    2.2.3 Complexité
 3. Solution stable
    3.1 Obstacles trouvés par l'algo de Gale Shapley
