@@ -11,7 +11,7 @@ Plus formellement, le problème des mariages stables a été énoncé ainsi :
 - Chaque personne a classé les personnes de l'autre sexe par ordre de préférence, sans égalité ni omission.
 - Une solution est une liste de couples (femme, homme) mariés.
 
-> :information_source: L'objectif est de trouvé une solution stable, c'est-à-dire raisonnable.
+> L'objectif est de trouvé une solution stable, c'est-à-dire raisonnable.
 
 Gale et Shapley définissent une solution à ce problème comme stable s'il n'y a pas de mariage tel qu'une femme et un homme se préfèrent mutuellement à leurs conjoints.
 
@@ -85,11 +85,22 @@ Cet algorithme se déroule en trois phases : une phase de propositions entre les
 
 Maintenant que l'on a supprimé les candidats qui ne seront pas choisis, il faut supprimer les cycles. En effet, comme nous l'avons indiqué plus haut, l'algorithme d'irving applique l'algorithme de Gale Shapley en autorisant les cycles. Les étapes suivantes permettent de supprimer les cycles :
 
--
+On répète les étapes suivantes jusqu'à ce que tous les noeuds n'aient plus qu'un seul candidat :
+
+- On cherche un noeud `N` avec plus d'un candidat.
+- Répéter jusqu'à ce que `N` apparaise de nouveau:
+  On note `(a,b)`, avec `a` le 2<sup>ème</sup> meilleur candidat de `N` et `b` le pire candidat de `a`.
+- On supprime ensuite toutes les paires `(a,b)`, c'est-à-dire les arêtes qui relient `a` et `b`.
+
+> Si une solution stable existe, alors chaque noeud n'est relié qu'à un seul autre. Sinon, il n'ya pas de solution stable.
 
 #### Complexité
 
-O(n<sup>2</sup>)
+Etant donné la complexité de l'algorithme de Gale Shapley, dans le meilleur et le pire des cas, l'algorithme d'Irving peut s'implémenter en O(n<sup>2</sup>), c'est-à-dire lorsque chaque noeud n'a qu'un seul candidat. Pour le pire cas, c'est différent.
+Dans la **phase 1**, il s'agit du cas où aucune solution stable existe et où un noeud va faire des demandes à tous les autres noeuds. Elle s'exécute donc en temps O(n).
+Pour les **phases 2 et 3**, il s'agit de passer par tous les candidats de tous les noeuds, soit O(n<sup>2</sup>).
+
+Donc dans tous les cas, l'algorithme d'Irving possède une **complexité en temps en O(n<sup>2</sup>)**.
 
 ### Solution stable
 
