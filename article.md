@@ -11,7 +11,7 @@ Plus formellement, le problème des mariages stables a été énoncé ainsi :
 - Chaque personne a classé les personnes de l'autre sexe par ordre de préférence, sans égalité ni omission.
 - Une solution est une liste de couples (femme, homme) mariés.
 
-> L'objectif est de trouvé une solution stable (raisonnable).
+> :information_source: L'objectif est de trouvé une solution stable, c'est-à-dire raisonnable.
 
 Gale et Shapley définissent une solution à ce problème comme stable s'il n'y a pas de mariage tel qu'une femme et un homme se préfèrent mutuellement à leurs conjoints.
 
@@ -54,17 +54,28 @@ Un algorithme efficace pour résoudre le problème des colocataires est énoncé
 
 Celui-ci détermine si un appariement stable exite ou pas, et renvoie un tel appariement s'il existe.
 
-#### 2.2.1 Fonctionnement et utilisation de Gale Shapley
+#### 2.2.1 Fonctionnement
 
-Cet algorithme se déroule en deux phases : une phase de propositions entre les individus, et une phase de suppression des cycles.
+Cet algorithme se déroule en trois phases : une phase de propositions entre les individus, une phase de rejet des individus et une phase de suppression des cycles.
 
-Dans la phase 1 :
+> Dans la suite, nous utiliserons l'exemple présent dans l'[annexe](https://docs.google.com/presentation/d/12gVfTqXWskSEo31JIrgMDtM8NyO91mQGmD2sAJUlm2U/edit#slide=id.g2a3e3583abe_0_53).
+
+##### Phase 1 :
 
 - Tout le monde se propose à son favoris.
 - Les destinataires de la proposition choisissent leur meilleur candidat et rejettent les autres.
 - Ceux qui ont été rejetés continuent de faire des propositions jusqu'à ce qu'il soient acceptés.
-> :warning: **Si quelqu'un est rejeté par tous les autres, il n'y a pas d'appariement stable !**
 
+> :warning: **Si quelqu'un est rejeté par tous les autres, il n'y a pas d'appariement stable !**
+>
+> Cette première étape consiste finalement en une application modifiée de l'algorithme de Gale Shapley, puisqu'elle autorise les cycles.
+
+##### Phase 2 :
+
+- Tous les candidats moins dérisables que le candidat actuel sont supprimés.
+
+##### Phase 3 :
+Maintenant que l'on a supprimé les candidats qui ne seront pas choisis
 #### 2.2.2 Complexité
 
 O(n<sup>2</sup>)
@@ -72,5 +83,7 @@ O(n<sup>2</sup>)
 ## Sources
 
 - [_LE PRIX NOBEL D’ÉCONOMIE 2012_, par Jérôme Buzzi](https://images.math.cnrs.fr/Le-prix-Nobel-d-economie-2012.html?lang=fr#menu)
-- Wikipedia : _Problème des mariages stables_ [en français](https://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables) et [en anglais](https://en.wikipedia.org/wiki/Stable_marriage_problem)
-- [Wikipedia : _Algorithme de Gale et Shapley_](https://fr.wikipedia.org/wiki/Algorithme_de_Gale_et_Shapley)
+- [_Algorithme de Gale et Shapley_](https://fr.wikipedia.org/wiki/Algorithme_de_Gale_et_Shapley)
+- [_Problème des mariages stables_](https://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables)
+- [_Stable marriage problem_](https://en.wikipedia.org/wiki/Stable_marriage_problem)
+- [_Irving's Algorithm and Stable Roommates Problem_](https://www.youtube.com/watch?app=desktop&v=5QLxAp8mRKo)
