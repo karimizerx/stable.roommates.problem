@@ -11,7 +11,7 @@ Plus formellement, le problème des mariages stables a été énoncé ainsi :
 - Chaque personne a classé les personnes de l'autre sexe par ordre de préférence, sans égalité ni omission.
 - Une solution est une liste de couples (femme, homme) mariés.
 
-> L'objectif est de trouvé une solution stable, c'est-à-dire raisonnable.
+> L'objectif est de trouver une solution stable, c'est-à-dire raisonnable.
 
 Gale et Shapley définissent une solution à ce problème comme stable s'il n'y a pas de mariage tel qu'une femme et un homme se préfèrent mutuellement à leurs conjoints.
 
@@ -22,7 +22,7 @@ Gale et Shapley définissent une solution à ce problème comme stable s'il n'y 
 > - Alice préfère être avec Pierre qu'avec Bob
 > - Pierre préfère être avec Alice qu'avec Julie
 >   Alors la solution est instable. En effet, on peut imaginer qu’alors, ils divorceraient pour se remarier.
->   La solution ne doit pas prescrire de mariages tels qu’une femme A et un homme b se préfèrent mutuellement à leurs conjoints prévus. Formellement, il ne doit pas y avoir deux mariages distincts (A,a) et (B,b) tels que A et b (ou a et B) préféreraient être mariés ensemble. En effet, (on peut imaginer qu’alors) ils divorceraient pour se remarier.
+>   La solution ne doit pas prescrire de mariages tels qu’une femme A et un homme b se préfèrent mutuellement à leurs conjoints prévus. Formellement, il ne doit pas y avoir deux mariages distincts (A,a) et (B,b) tels que A et b (ou a et B) préféreraient être mariés ensemble.
 
 ### Problème des colocataires
 
@@ -92,30 +92,28 @@ On répète les étapes suivantes jusqu'à ce que tous les noeuds n'aient plus q
   On note `(a,b)`, avec `a` le 2<sup>ème</sup> meilleur candidat de `N` et `b` le pire candidat de `a`.
 - On supprime ensuite toutes les paires `(a,b)`, c'est-à-dire les arêtes qui relient `a` et `b`.
 
-> Si une solution stable existe, alors chaque noeud n'est relié qu'à un seul autre. Sinon, il n'ya pas de solution stable.
+> Si une solution stable existe, alors chaque noeud est relié à exactement un autre noeud. Sinon, il n'ya pas de solution stable.
 
 #### Complexité
 
-Etant donné la complexité de l'algorithme de Gale Shapley, dans le meilleur et le pire des cas, l'algorithme d'Irving peut s'implémenter en O(n<sup>2</sup>), c'est-à-dire lorsque chaque noeud n'a qu'un seul candidat. Pour le pire cas, c'est différent.
-Dans la **phase 1**, il s'agit du cas où aucune solution stable existe et où un noeud va faire des demandes à tous les autres noeuds. Elle s'exécute donc en temps O(n).
-Pour les **phases 2 et 3**, il s'agit de passer par tous les candidats de tous les noeuds, soit O(n<sup>2</sup>).
+Etant donné la complexité de l'algorithme de Gale Shapley, dans le meilleur et le pire des cas, l'algorithme d'Irving peut s'implémenter en O(n²), c'est-à-dire lorsque chaque noeud n'a qu'un seul candidat. Pour le pire cas, c'est différent.
+Dans la **phase 1**, il s'agit du cas où aucune solution stable existe et où un noeud va faire des demandes à tous les autres noeuds jusqu'à ce qu'il y ait une demande et une requète par noeud. Elle s'exécute donc en temps O(n²) car plusieurs demandes peuvent être faites par chaque noeud.
+Dans la **phase 2**, il suffit de retirer les options moins intéressantes que l'offre courrante pour chaque noeud, cela s'éxecute en temps O(n²) dans le cas où il faut retirer tous les choix d'un même noeud.
+Pour la **phase 3**, il s'agit de passer par tous les candidats de tous les noeuds pour trouver les cycles à supprimer, soit O(n²).
 
-Donc dans tous les cas, l'algorithme d'Irving possède une **complexité en temps en O(n<sup>2</sup>)**.
+Donc dans tous les cas, l'algorithme d'Irving possède une **complexité en temps en O(n²)**, comme chaque étape modifie l'état pour la suivante, si deux phases s'éxecute en temps O(n), la troisième s'éxecutera en temps O(n²).
 
 ### Solution stable
 
 #### Obstacles trouvés par l'algo de Gale Shapley
 
-L'algorithme doit assurer que chaque personne à coupler est couplée avec son meilleur partenaire possible. Comme les hommes décrèmentent progressivement 
-leur demande avec les rejets, ils sont sûrs d'avoir le meilleur partenaire stable possible. Cependant, comme les femmes ne peuvent pas faire de demande, elles ne peuvent
-pas assurer d'avoir leur partenaire stable préféré. Ainsi, les femmes sont toujours couplées avec leur pire partenaires stables, car elles ne peuvent qu'accepter les demandes 
-et refuser les partenaires instables.
+L'algorithme doit assurer que chaque personne à coupler est couplée avec son meilleur partenaire possible. Comme les hommes décrèmentent progressivement leur demande avec les rejets, ils sont sûrs d'avoir le meilleur partenaire stable possible. 
+Cependant, comme les femmes ne peuvent pas faire de demande, elles ne peuvent pas assurer d'avoir leur partenaire stable préféré. Ainsi, les femmes sont toujours couplées avec leur pire partenaires stables, car elles ne peuvent qu'accepter les demandes et refuser les partenaires instables.
 
 #### Comment expliquer et être sûr qu'une solution stable n'existe pas ?
 
 L'algorithme de Gale-Shapley est capable de trouver systématiquement une solution stable car on cherche à former des couples entre 2 ensembles distincts de même taille.
-Ainsi, il existe toujours exactement une solution pour tous deux ensembles. Cependant, il devient impossible d'assûrer l'existence d'un tel couplage stable si l'on
-pioche dans un seul ensemble.
+Ainsi, il existe toujours exactement une solution pour tous deux ensembles. Cependant, il devient impossible d'assûrer l'existence d'un tel couplage stable si l'on pioche dans un seul ensemble.
 
 ## Sources
 
