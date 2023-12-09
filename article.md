@@ -42,13 +42,20 @@ Cette liste n'est pas exhaustive, mais présente des problèmes qui ont été r�
 
 ## Les Algorithmes et leur complexité
 
-### 2.1 Algorithme de Gale Shapley
+### Algorithme de Gale Shapley
 
-#### 2.1.1 Fonctionnement
+#### Fonctionnement
 
-#### 2.1.2 Complexité
+L'algorithme de Gale-Shapley procède par élimination. Tant qu'il existe un homme qui n'est pas en couple, on parcourt la liste des hommes,
+et chaque homme fait une requète à son choix de préfèrence qui ne l'a pas encore refusé. Si une femme reçoit une demande et n'en a pas d'autres, elle accepte temporairement.
+Si elle a déjà reçu une demande, elle conserve son choix préféré et l'homme qui a été refusé devra faire une nouvelle demande.
 
-### 2.2 Algorithme d'Irving
+#### Complexité
+
+Dans le pire des cas, l'algorithme de Gale-Shapley va faire toutes les demandes possibles de chaque homme pour trouver un couplage stable, soit n demandes pour n hommes.
+La complexité de cet algorithme est donc O(n²) ou O(n) dans le meilleur cas, où chaque homme trouve son couplage stable dès la première demande, sans conflit.
+
+### Algorithme d'Irving
 
 Un algorithme efficace pour résoudre le problème des colocataires est énoncé par Irving en 1985.
 
@@ -75,10 +82,26 @@ Cet algorithme se déroule en trois phases : une phase de propositions entre les
 - Tous les candidats moins dérisables que le candidat actuel sont supprimés.
 
 ##### Phase 3 :
-Maintenant que l'on a supprimé les candidats qui ne seront pas choisis
-#### 2.2.2 Complexité
+
+Maintenant que l'on a supprimé les candidats qui ne seront pas choisis, il faut supprimer les cycles. En effet, comme nous l'avons indiqué plus haut, l'algorithme d'irving applique l'algorithme de Gale Shapley en autorisant les cycles. Les étapes suivantes permettent de supprimer les cycles :
+
+-
+
+#### Complexité
 
 O(n<sup>2</sup>)
+
+### Solution stable
+
+#### Obstacles trouvés par l'algo de Gale Shapley
+
+c'était dur
+
+#### Comment expliquer et être sûr qu'une solution stable n'existe pas ?
+
+L'algorithme de Gale-Shapley est capable de trouver systématiquement une solution stable car on cherche à former des couples entre 2 ensembles distincts de même taille.
+Ainsi, il existe toujours exactement une solution pour tous deux ensembles. Cependant, il devient impossible d'assûrer l'existence d'un tel couplage stable si l'on
+pioche dans un seul ensemble.
 
 ## Sources
 
